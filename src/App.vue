@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <keep-alive>
+    <component :is="conteudo" />
+  </keep-alive>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Calcular from "./components/Calcular.vue";
+import Resultado from "./components/Resultado.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { Calcular, Resultado },
+  name: "App",
+  data: () => ({
+    conteudo: "Calcular",
+  }),
+  mounted() {
+    this.emitter.on("Simular", (p) => {
+      this.conteudo = p;
+    });
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
