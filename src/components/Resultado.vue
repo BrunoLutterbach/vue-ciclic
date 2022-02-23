@@ -18,14 +18,14 @@
         todo mês,
       </h4>
       <h4>
-        Você terá R$
+        Você terá 
         {{
           parseInt(dados.resultado).toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
           })
         }}
-      </h4>
+      </h4>npm
       <h4>Em {{ dados.tempo }} meses</h4>
       <div class="d-flex justify-content-center pt-3">
         <button
