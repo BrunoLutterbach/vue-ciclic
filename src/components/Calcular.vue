@@ -25,6 +25,7 @@
               <input
                 type="number"
                 class="form-control"
+                placeholder="Valor depositado por mês"
                 v-model="dados.mensalidade"
               />
             </div>
