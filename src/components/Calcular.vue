@@ -87,7 +87,7 @@ export default {
           expr: `${this.dados.mensalidade} * (((1 + 0.00517) ^ ${this.dados.tempo} - 1) / 0.00517)`,
         };
         axios
-          .post("http://api.mathjs.org/v4/", this.formData)
+          .post("https://api.mathjs.org/v4/", this.formData)
           .then(
             (response) =>
               (this.dados.resultado = response.data.result.toLocaleString(

@@ -8,7 +8,7 @@
       <hr />
       <h4 class="pt-4">Olá {{ dados.nome }}</h4>
       <h4>
-        Juntando R$
+        Juntando 
         {{
           parseInt(dados.mensalidade).toLocaleString("pt-br", {
             style: "currency",
