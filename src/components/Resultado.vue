@@ -25,7 +25,7 @@
             currency: "BRL",
           })
         }}
-      </h4>npm
+      </h4>
       <h4>Em {{ dados.tempo }} meses</h4>
       <div class="d-flex justify-content-center pt-3">
         <button
